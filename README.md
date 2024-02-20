@@ -1,7 +1,1 @@
-# Chai-example
-
-# nom du repo: b3-dev-nom-prenom
-
-# classe triangle en tdd
-
-# classe cercle en bdd
+Les méthodes et tests relatifs au stock ne sont pas gérés ici, j'ai besoin de passer du temps dessus et de les reprendre pour mieux comprendre.
