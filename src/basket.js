@@ -1,21 +1,3 @@
-// class Cube {
-//     constructor(length) {
-//         this.length = length;
-//     }
-    
-//     getSideLength() {
-//         return this.length;
-//     }
-    
-//     getSurfaceArea() {
-//         return (this.length * this.length) * 6;
-//     }
-    
-//     getVolume() {
-//         return Math.pow(this.length, 3);
-//     }
-// }
-
 class Basket {
     constructor() {
         this.items = []; // Each item is an object { name: 'Item', price: 1.99 }
@@ -77,40 +59,4 @@ class Basket {
     }
 }
 
-class Stock {
-    constructor() {
-        this.items = [];
-    }
-
-    addItem(name) {
-        this.items.push({ name: name, expirationDate: this.expirationDate});
-        console.log(`${name} has been successfully added to the stock.`);
-    }
-
-    removeItem(itemToRemove) {
-        const index = this.items.findIndex(item => item.name === itemToRemove);
-        if (index !== -1) {
-            this.items.splice(index, 1);
-            console.log(`${itemToRemove} has been removed from the stock.`);
-        } else {
-            console.log(`Unable to find ${itemToRemove} in the stock.`);
-        }
-    }
-}
-
-class Item {
-    constructor(name, price) {
-        this.name = name;
-        this.price = price;
-    }
-
-    applyCoupon(price, coupon) {
-        price = this.price;
-        let endPrice = price - coupon;
-        return endPrice;
-    }
-}
-
-module.exports = {
-    Basket, Stock, Item
-}
+export default Basket;
