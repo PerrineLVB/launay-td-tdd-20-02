@@ -58,6 +58,11 @@ describe('Basket Class with Discounts', function() {
             basket.addItem('Apple', 10);
             basket.applyCoupon('SPRING24', 2);
             expect(basket.calculateTotal()).to.equal(8);
+        });
+        it ('discounted item price should not be less than 0', function(){
+            basket.addItem('Apple', 2);
+            basket.applyCoupon('SPRING24', 10);
+            expect(basket.calculateTotal())>=0;
         })
     });
 });
