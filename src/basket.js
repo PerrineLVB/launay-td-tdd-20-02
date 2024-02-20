@@ -3,6 +3,11 @@ class Basket {
         this.items = []; // Each item is an object { name: 'Item', price: 1.99 }
     }
 
+    coupon = {
+        code: 'SPRING24',
+        amount: 2
+    }
+
     // Add an item to the basket
     addItem(name, price) {
         if (price <= 0) {
@@ -58,9 +63,9 @@ class Basket {
         console.log("The basket is now as empty as a salesman's promises on Black Friday.");
     }
 
-    applyCoupon(code, amount){
-        if (code === 'SPRING24'){
-            this.items[0].price -= amount;
+    applyCoupon(coupon){
+        if (coupon.code === 'SPRING24'){
+            this.items[0].price -= coupon.amount;
         }
     }
 }

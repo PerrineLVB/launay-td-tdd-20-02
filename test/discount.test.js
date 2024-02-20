@@ -66,8 +66,12 @@ describe('Basket Class with Discounts', function() {
         });
         it ('coupon should exist', function(){
             basket.addItem('Apple', 10);
+            let coupon = {
+                code: 'SPRING24',
+                amount: 2
+            }
             basket.applyCoupon(coupon);
-            expect(basket.calculateTotal).to.equal(8);
+            expect(basket.calculateTotal()).to.equal(8);
         })
     });
 });
