@@ -66,7 +66,8 @@ describe('Basket Class with Discounts', function() {
         });
         it ('coupon should exist', function(){
             basket.addItem('Apple', 10);
-            expect(basket.applyCoupon(coupon)).to.equal(8);
+            basket.applyCoupon(coupon);
+            expect(basket.calculateTotal).to.equal(8);
         })
     });
 });
