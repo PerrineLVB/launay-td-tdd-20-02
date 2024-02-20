@@ -1,6 +1,5 @@
-import { expect } from 'chai';
-import { describe, it } from 'mocha';
-import Basket from '../src/basket.js';
+const expect = require('chai').expect;
+const Basket = require('../src/basket.js');
 
 describe('Basket Class with Discounts', function() {
     let basket;
@@ -52,5 +51,13 @@ describe('Basket Class with Discounts', function() {
             // The total should not change because the discount can only be applied once
             expect(total).to.equal(0.9);
         });
+    });
+
+    describe ('coupons tests', function() {
+        it ('should apply coupon to item price', function(){
+            basket.addItem('Apple', 10);
+            basket.applyCoupon('SPRING24', 2);
+            expect(basket.calculateTotal()).to.equal(8);
+        })
     });
 });

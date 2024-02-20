@@ -1,7 +1,5 @@
-import { expect } from 'chai';
-import { describe, it } from 'mocha';
-import Basket from '../src/basket.js';
-
+const expect = require('chai').expect;
+const Basket = require('../src/basket.js');
 
 describe('Basket Class', function() {
     let basket;

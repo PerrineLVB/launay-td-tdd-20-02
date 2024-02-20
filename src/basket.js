@@ -59,4 +59,4 @@ class Basket {
     }
 }
 
-export default Basket;
+module.exports = Basket;

@@ -18,9 +18,9 @@
   },
   "homepage": "https://github.com/rmess/Chai-example#readme",
   "dependencies": {
-    "chai": "^4.3.7",
+    "chai": "^4.4.1",
     "lts": "^1.2.0",
-    "mocha": "^10.1.0",
+    "mocha": "^10.3.0",
     "save-dev": "^0.0.1-security"
   }
 }
