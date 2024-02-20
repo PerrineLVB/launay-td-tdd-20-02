@@ -57,6 +57,12 @@ class Basket {
         this.items = [];
         console.log("The basket is now as empty as a salesman's promises on Black Friday.");
     }
+
+    applyCoupon(code, amount){
+        if (code === 'SPRING24'){
+            this.items[0].price -= amount;
+        }
+    }
 }
 
 module.exports = Basket;
